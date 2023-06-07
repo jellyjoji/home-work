@@ -23,6 +23,34 @@ fieldset 요소의 제목(LEGEND)을 표시한다. fieldset 요소를 이용하�
     </fieldset>
 </form>
 ```
+## position
+#### position : static;
+마크업한 순서대로 보여주는 정적인 상태.
+#### position : absolute;
+요소를 띄어 올린다.
+어떤요소든 position : absolute; 주면 독립적인 block 으로 렌더된다.
+#### position : relative
+static 하게 붙어있던 로고를 살짝 띄워서 움직일수있는 상태로 변경.
+```
+/* fieldset 에 라인 없애기주기 */
+fieldset{
+  border: none;  
+}
+/* position 의 상위 기준 static */
+.extraContainer{
+  display: inline;
+  /* position: static; */
+}
+.signUp{
+  display: inherit;
+}
+/* 부모를 기준으로 배치되도록 position: relative  설정 */
+.findIdPw{
+  position: relative;
+  display: inherit;
+  padding-left: 0.5rem;
+}
+```
 
 
 <img width="755" alt="스크린샷_2023-06-07_오후_4 30 53" src="https://github.com/jellyjoji/home-work/assets/74365275/5d3066ef-163f-4890-94a8-12c9e002ebd1">
