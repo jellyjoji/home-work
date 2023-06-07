@@ -63,12 +63,12 @@ input{
   border-radius: var(--border-radius);
   color: #ffffff;
 }
-/*  */
+/* fieldset 에 라인 없애기주기 */
 fieldset{
   border: none;  
 }
+/* position 의 상위 기준 static */
 .extraContainer{
-  position: static;
   border-radius: var(--border-radius);
   display: inline;
   /* position: static; */
@@ -78,6 +78,7 @@ fieldset{
   display: inherit;
   font-size: var(--font-small);
 }
+/* 부모를 기준으로 배치되도록 position: relative  설정 */
 .findIdPw{
   position: relative;
   display: inherit;
