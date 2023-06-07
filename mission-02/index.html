@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,34 +13,41 @@
 - 이미지 assets 없이 모든 디자인을 CSS로 구현한다.
 - 일부 요소의 배치를 position 속성을 활용하여 구현한다.
 - mission-02/README.md 파일을 생성한 후 마크업 코드와 CSS 코드에 대한 설명을 적고 아래 이미지와 같이 완성된 UI 스크린샷을 삽입한다. -->
+
 <body>
-  <form action="/">
+  <form action="/" class="login-form" method="POST">
     <fieldset>
       <legend>로그인</legend>
-      <!-- id -->
-      <div class="loginContainer">
-        <div class="id">
-          <label for="id">아이디</label>
-          <input type="text" class="" id="id" placeholder="euid@euid.dev" required />
+      <div class="container">
+        <div class="loginContainer">
+          <!-- id -->
+          <div class="loginInput">
+            <div class="id">
+              <label for="id">아이디</label>
+              <input type="text" class="" id="id" placeholder="euid@euid.dev" required />
+            </div>
+            <!-- pw -->
+            <div class="pw">
+              <label for="pw">비밀번호</label>
+              <input type="password" class="" id="pw" placeholder="8자리 이상" required />
+            </div>
+          </div>
+          <!-- button -->
+          <button type="submit" class="loginBtn">로그인</button>
         </div>
-        <!-- pw -->
-        <div class="pw">
-          <label for="pw">비밀번호</label>
-          <input type="password" class="" id="pw" placeholder="8자리 이상" required />
+        <!-- signUp & find id and pw -->
+        <div class="extraContainer">
+          <div class="signUp">
+            <a href="/"> <strong>&gt</strong> 회원가입</a>
+          </div>
+          <div class="findIdPw">
+            <a href="/"> <strong>&gt</strong> 아이디 비밀번호 찾기</a>
+          </div>
         </div>
       </div>
-      <!-- signUp & find id and pw -->
-      <div class="extraContainer">
-        <div class="signUp">
-          <a href="/">회원가입</a>
-        </div>
-        <div class="findIdPw">
-          <a href="/">아이디 비밀번호 찾기</a>
-        </div>
-      </div>
-      <!-- button -->
-      <button type="submit" class="loginBtn">로그인</button>
+
     </fieldset>
   </form>
 </body>
+
 </html>
