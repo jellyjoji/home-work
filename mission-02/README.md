@@ -23,7 +23,7 @@ fieldset 요소의 제목(LEGEND)을 표시한다. fieldset 요소를 이용하�
 ```
 #### .a11yHidden
 접근성 향상을 위해 제목을 legend 에 추가한 후 .a11yHidden 클래스 속성을 주어 눈에 보이지 않지만 숨겨진 정보를 전달할수 있게 설계하였다. 
-````
+````g
 <legend class=".a11yHidden">로그인</legend>
 ````
 ````
@@ -39,9 +39,14 @@ legend {
   margin: -1px;
 }
 ````
-#### ul li
-목록 요소 중 
-ul 비순차 목록(Unordered List) 요소와 li 목록 항목(List Item) 요소를 사용하여 회원가입 및 아이디/비밀번호 찾기 링크를 설계하였다.
+## 목록 태그
+#### ul 
+비순차 목록(Unordered List) 요소
+#### ol 
+순차 목록(Ordered List) 요소
+#### li 
+목록 항목(List Item) 요소
+목록 요소 중 ul 비순차 목록(Unordered List) 요소와 li 목록 항목(List Item) 요소를 사용하여 회원가입 및 아이디/비밀번호 찾기 링크를 설계하였다.
 ````
 <ul class="extraContainer">
   <li class="signUp">
@@ -57,8 +62,10 @@ ul 비순차 목록(Unordered List) 요소와 li 목록 항목(List Item) 요소
 마크업한 순서대로 보여주는 정적인 상태이며 기본 속성이다.
 #### position : absolute;
 어떤 요소든 position : absolute; 주면 독립적인 block 으로 렌더된다. 가장 가까운 position : relative 요소를 기준으로 삼는다.
-#### position : relative
+#### position : relative;
 static 하게 붙어있던 로고를 살짝 띄워서 움직일수있는 상태로 변경한다. 지금 현재 위치를 기준으로 한다.
+***
+상위 container 태그에 position: relative; 를 주고 하위 loginBtn 태그에 position: absolute; 을 주고 container 를 기준으로 loginBtn 위치가 변경되도록 하였다.
 ```
 <div class="container">
   <div class="loginInput">
