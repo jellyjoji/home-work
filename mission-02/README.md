@@ -10,45 +10,68 @@
 
 ## form 태그 
 #### fieldset
-fieldset 요소는 관련 있는 폼 필드 세트(form FIELD SET)를 표시한다. 폼 필드 세트는 폼 내에서 관련 컨트롤을 하나의 그룹으로 묶은 것을 말한다.
-폼을 효과적으로 계층화시킬 수 있다. 이때 legend 요소를 함께 사용해야 한다.
+fieldset 요소는 관련 있는 폼 필드 세트(form FIELD SET)를 표시한다. 폼 필드 세트는 폼 내에서 관련 컨트롤을 하나의 그룹으로 묶은 것을 말한다. 이때 legend 요소를 함께 사용해야 한다.
 #### legend
 fieldset 요소의 제목(LEGEND)을 표시한다. fieldset 요소를 이용하여 여러 개의 컨트롤들을 묶었으면 이 묶음이 어떤 성격 또는 용도인지 알려줄 필요가 있으며, 이때 legend 요소를 사용한다.
 이 요소를 사용하면 fieldset 요소로 묶인 영역 주변에 테두리 선이 나타난다.
-
 ```
 <form action="/" class="login-form" method="POST">
-    <fieldset>
-      <legend>로그인</legend>
-    </fieldset>
+  <fieldset>
+    <legend class=".a11yHidden">로그인</legend>
+  </fieldset>
 </form>
 ```
+#### .a11yHidden
+이게 무슨 컨텐트인지 숨긴 제목을 추가하기 위해 .a11yHidden 태그를 클레스로 추가하였다. 
+````
+/* Accessibility Styles */
+.a11yHidden,
+legend {
+  overflow: hidden;
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+````
+#### ul li
+목록 요소 중 
+ul 비순차 목록(Unordered List) 요소와 li 목록 항목(List Item) 요소를 사용하여 회원가입 및 아이디/비밀번호 찾기 링크를 설계하였다.
+````
+<ul class="extraContainer">
+  <li class="signUp">
+    <a href="/"> <strong>&gt</strong> 회원가입</a>
+  </li>
+  <li class="findIdPw">
+    <a href="/"> <strong>&gt</strong> 아이디 비밀번호 찾기</a>
+  </li>
+</ul>
+````
 ## position
 #### position : static;
-마크업한 순서대로 보여주는 정적인 상태.
+마크업한 순서대로 보여주는 정적인 상태이며 기본 속성이다.
 #### position : absolute;
-요소를 띄어 올린다.
-어떤요소든 position : absolute; 주면 독립적인 block 으로 렌더된다.
+어떤 요소든 position : absolute; 주면 독립적인 block 으로 렌더된다. 가장 가까운 position : relative 요소를 기준으로 삼는다.
 #### position : relative
-static 하게 붙어있던 로고를 살짝 띄워서 움직일수있는 상태로 변경.
+static 하게 붙어있던 로고를 살짝 띄워서 움직일수있는 상태로 변경한다. 지금 현재 위치를 기준으로 한다.
 ```
-/* fieldset 에 라인 없애기주기 */
-fieldset{
-  border: none;  
-}
-/* position 의 상위 기준 static */
-.extraContainer{
-  display: inline;
-  /* position: static; */
-}
-.signUp{
-  display: inherit;
-}
-/* 부모를 기준으로 배치되도록 position: relative  설정 */
-.findIdPw{
+.container {
   position: relative;
-  display: inherit;
-  padding-left: 0.5rem;
+  padding: 0.5rem;
+}
+.loginBtn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 50px;
+  height: 53px;
+  border: none;
+  font-size: var(--font-small);
+  color: var(--font-white);
+  border-radius: var(--border-radius);
+  background: var(--login-backgrond);
 }
 ```
 

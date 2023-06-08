@@ -1,93 +1,133 @@
-*{
+* {
   box-sizing: border-box;
   font-family: sans-serif;
   font-size: var(--font-medium);
+  color: var(--font-black);
+  margin: 0;
+  padding: 0;
 }
-:root{
-  --color-gradient: linear-gradient(#ED552F, #E8852e);
+
+/* Accessibility Styles */
+.a11yHidden,
+legend {
+  overflow: hidden;
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+:root {
+  /* color */
+  --color-gradient: linear-gradient(to left top, #E8852e, #ED552F);
   --login-backgrond: #ED552F;
   --accemt-yellow: #ffff00;
   --gray-500: #cccccc;
-
-  --font-larg:15px;
-  --font-medium:14px;
-  --font-small:13px;
-  
-  --border-radius:5px;
-
+  --font-black: #000000;
+  --font-white: #ffffff;
+  /* font size */
+  --font-larg: 15px;
+  --font-medium: 14px;
+  --font-small: 13px;
+  /* border radius */
+  --border-radius: 5px;
+  /* shadow */
   --drop-shadow: drop-shadow(5px 5px 0 #aaaaaa);
 }
 
-
-.login-form{
+main {
+  background: var(--color-gradient);
+  border-radius: var(--border-radius);
+  margin: 2rem;
+  padding: 0.75rem;
   width: 244px;
   height: 161px;
-  border-radius: var(--border-radius);
-  background: var(--color-gradient);
   filter: var(--drop-shadow);
 }
-legend{
+
+.background {
+  background-color: #fff;
+  border-radius: var(--border-radius);
+}
+
+/* form */
+h2 {
   color: var(--accemt-yellow);
   font-size: var(--font-larg);
-  font-weight: 700;
-  line-height: 1.5;
-  padding: 0.5rem 0 0 0;
+  margin: 0;
+  line-height: 2.5;
 }
-.container{
-  background: #ffffff;
-  border-radius: var(--border-radius);
+
+fieldset {
+  border: none;
+}
+
+/* mission : use Position  */
+.container {
+  position: relative;
   padding: 0.5rem;
 }
-.loginContainer{
-  padding-bottom: 0.5rem;
-  display: flow-root;
-  border-bottom: 1px solid var(--gray-500);
-}
-.loginInput{
+
+.loginInput {}
+
+label {
   float: left;
+  margin-right: 0;
+  line-height: 1.5;
+  width: 56px;
 }
-input{
+
+input {
   width: 90px;
   height: 24px;
-  border-radius: var(--border-radius);
   border: 1px solid var(--gray-500);
-  padding-left: 0.5rem;
+  border-radius: var(--border-radius);
+  padding-left: 0.4rem;
+}
+
+.id {
   margin-bottom: 0.25rem;
 }
-.loginBtn{
-  float: right;
+
+.loginBtn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
   width: 50px;
   height: 53px;
-  background: var(--login-backgrond);
   border: none;
+  font-size: var(--font-small);
+  color: var(--font-white);
   border-radius: var(--border-radius);
-  color: #ffffff;
+  background: var(--login-backgrond);
 }
-/* fieldset 에 라인 없애기주기 */
-fieldset{
-  border: none;  
-}
-/* position 의 상위 기준 static */
-.extraContainer{
-  border-radius: var(--border-radius);
-  display: inline;
-  /* position: static; */
+
+/* signUp & find id and pw */
+.extraContainer {
+  padding: 0.5rem;
+  border-top: 1px solid var(--gray-500);
+  margin: 0 0.25rem;
   line-height: 1.5;
 }
-.signUp{
-  display: inherit;
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
   font-size: var(--font-small);
 }
-/* 부모를 기준으로 배치되도록 position: relative  설정 */
-.findIdPw{
-  position: relative;
-  display: inherit;
-  padding-left: 0.5rem;
+
+.signUp {
+  float: left;
+  margin-right: 1rem;
 }
-a{
-  color: inherit;
-  text-decoration: none;
-}
-strong{
+
+strong {
   color: var(--login-backgrond);
+  margin-right: 0.25rem;
 }
