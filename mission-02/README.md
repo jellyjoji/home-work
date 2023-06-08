@@ -22,7 +22,10 @@ fieldset 요소의 제목(LEGEND)을 표시한다. fieldset 요소를 이용하�
 </form>
 ```
 #### .a11yHidden
-이게 무슨 컨텐트인지 숨긴 제목을 추가하기 위해 .a11yHidden 태그를 클레스로 추가하였다. 
+접근성 향상을 위해 제목을 legend 에 추가한 후 .a11yHidden 클래스 속성을 주어 눈에 보이지 않지만 숨겨진 정보를 전달할수 있게 설계하였다. 
+````
+<legend class=".a11yHidden">로그인</legend>
+````
 ````
 /* Accessibility Styles */
 .a11yHidden,
@@ -56,6 +59,24 @@ ul 비순차 목록(Unordered List) 요소와 li 목록 항목(List Item) 요소
 어떤 요소든 position : absolute; 주면 독립적인 block 으로 렌더된다. 가장 가까운 position : relative 요소를 기준으로 삼는다.
 #### position : relative
 static 하게 붙어있던 로고를 살짝 띄워서 움직일수있는 상태로 변경한다. 지금 현재 위치를 기준으로 한다.
+```
+<div class="container">
+  <div class="loginInput">
+    <!-- id  -->
+    <div class="id">
+      <label for="id">아이디</label>
+      <input type="text" class="" id="id" placeholder="euid@euid.dev" required />
+    </div>
+    <!-- pw -->
+    <div class="pw">
+      <label for="pw">비밀번호</label>
+      <input type="password" class="" id="pw" placeholder="8자리 이상" required />
+    </div>
+  </div>
+  <!-- button -->
+  <button type="submit" class="loginBtn">로그인</button>
+</div>
+```
 ```
 .container {
   position: relative;
