@@ -1,4 +1,4 @@
-# position
+# position 을 활용한 로그인 form 제작
 
 마크업 순서
 1. 로그인(제목)
@@ -46,6 +46,7 @@ legend {
 순차 목록(Ordered List) 요소
 #### li 
 목록 항목(List Item) 요소
+***
 목록 요소 중 ul 비순차 목록(Unordered List) 요소와 li 목록 항목(List Item) 요소를 사용하여 회원가입 및 아이디/비밀번호 찾기 링크를 설계하였다.
 ````
 <ul class="extraContainer">
