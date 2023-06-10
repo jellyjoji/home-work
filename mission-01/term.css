@@ -59,3 +59,46 @@ dt{
   color: var(--accent-blue);
   font-weight: 700;
 }
+/*  */
+.term-list-wrapper{
+  background: purple;
+  /* 내가 루트가 되어야 ... */
+  display: flow-root;
+}
+.term-list{
+  background: pink;
+}
+.term-subject{
+  background: yellow;
+}
+.term-thumnail{
+  background: blue;
+}
+.term-thumnail img{
+  display: block;
+}
+.term-list-brief{
+  float: right;
+}
+/* .odd .term-list-subject, .odd .term-list-brief, .odd .term-list-thumbnail{
+  float: left;
+}
+.even .term-list-subject, .even .term-list-brief, .even .term-list-thumbnail{
+  float: right;
+} */
+
+/* default 공통으로 주기  */
+
+.cross .term-subject, .cross .term-list-brief{
+  float: left;
+}
+.cross .term-thumnail{
+  float: right;
+}
+/* .cross 공통으로 교차시키기 위해  */
+/* 마크업할때마다 cross 를 주는게 비합리적이라면  
+  짝수번째 자식요소만 선택하기 list:nth-child(even)
+*/
+.cross .term-subject:nth-child(even)
+
+term-subject 와 term-list-brief 의 width 값을 지정해주고 float:right 하고 이미지는 float: right 주고 잃어버린 display: flow-root 를 term-list 로 지정해줘야한다.

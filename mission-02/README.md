@@ -66,7 +66,7 @@ legend {
 #### position : relative;
 static 하게 붙어있던 로고를 살짝 띄워서 움직일수있는 상태로 변경한다. 지금 현재 위치를 기준으로 한다.
 ***
-상위 container 태그에 position: relative; 를 주고 하위 loginBtn 태그에 position: absolute; 을 주고 container 를 기준으로 loginBtn 위치가 변경되도록 하였다.
+상위 container 태그에 position: relative; 를 주고 하위 loginBtn 태그에 position: absolute; 을 주어 container 를 기준으로 loginBtn 위치가 변경되도록 하였다.
 ```
 <div class="container">
   <div class="loginInput">
