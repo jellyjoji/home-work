@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,14 +8,22 @@
   <title>transition</title>
   <link rel="stylesheet" href="transition.css" />
 </head>
+
 <body>
-  <h1 class="title">관련 사이트</h1>
-  <ul class="container">
-    <li class="list"><a href="/">제로베이스</a></li>
-    <li class="list"><a href="/">MDN</a></li>
-    <li class="list"><a href="/">웹접근성 연구소</a></li>
-    <li class="list"><a href="/">Web Standards</a></li>
-    <li class="list"><a href="/">W3C</a></li>
-  </ul>
+  <main>
+    <h1 class="title" aria-label="related sites">관련 <strong>사이트</strong></h1>
+    <ul class="container">
+      <li class="list"><a href="/">제로베이스</a>
+        <ul>
+          <li class="list"><a href="/">MDN</a></li>
+          <li class="list"><a href="/">웹접근성 연구소</a></li>
+          <li class="list"><a href="/">Web Standards</a></li>
+          <li class="list"><a href="/">W3C</a></li>
+
+        </ul>
+      </li>
+    </ul>
+  </main>
 </body>
+
 </html>
