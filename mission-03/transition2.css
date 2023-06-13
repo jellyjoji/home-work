@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+}
+
+.gradient-effect {
+  border: 1px solid #aaa;
+  width: 200px;
+
+  background: yellow linear-gradient(#ccc, #eee);
+}
+
+/* style 을 위한 이름 */
+.spacing-sm {
+  padding: 5px;
+}
+
+.spacing-md {
+  padding: 10px;
+}
+
+.spacing-lg {
+  padding: 15px;
+}
+
+.related-title {
+  margin: 0;
+  font-size: 18px;
+}
+
+.accent-primary-color {
+  color: orange;
+}
+
+.accent-secondary-color {
+  color: violet;
+}
+
+.related-list {
+  /* 시게방향  */
+  margin: 10px 0 0 0;
+  padding-left: 0;
+  list-style: none;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  height: 25px;
+  /* 넘치는 데이터는 감춤처리  */
+  overflow: hidden;
+  transition: height 400ms;
+  padding-top: 400ms 400ms;
+  /* 보더 포함한 값으로 계산   */
+  box-sizing: border-box;
+
+}
+
+.related-list:hover {
+  padding-top: 20px;
+  height: 145px;
+}
+
+.related-list a {
+  /* 전체 목록을 인식  */
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  line-height: 25px;
+  padding: 0 10px 0 20px;
+
+}
