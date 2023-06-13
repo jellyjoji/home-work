@@ -1,0 +1,60 @@
+* {
+  font-size: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+:root {
+  --color-primary: #ED552F;
+  --color-gray: rgb(163, 163, 163);
+
+  --font-md: 14px;
+
+  --border-radius: 5px;
+}
+
+main {
+  background: white;
+  padding: 1rem;
+  margin: 2rem;
+  width: 380px;
+  height: auto;
+  border: 1px solid var(--color-gray);
+  border-radius: var(--border-radius);
+}
+
+.header {
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--color-gray);
+  line-height: 2;
+  font-size: var(--font-md);
+  /* background: pink; */
+
+}
+
+
+.container {
+  /* grid 사용 */
+  padding: 2rem 0;
+  display: grid;
+  grid-template-columns: auto auto;
+
+  /* background: skyblue; */
+}
+
+.thumbNail {
+  /* background: yellow; */
+}
+
+figcaption {
+  /* background: purple; */
+  text-align: center;
+}
+
+.subContainer {
+  /* background: lime; */
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 0.5rem;
+}
