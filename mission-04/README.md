@@ -69,7 +69,8 @@ dt dd 는 가급적 1:1 대응할때 사용합니다. 주로 이름과 값을 �
 }
 ```
 ## 완성 이미지
-![news 1](https://github.com/jellyjoji/home-work/assets/74365275/44720fbb-6e93-46ef-b565-3f066e2d1147)
+<img width="755" alt="스크린샷_2023-06-12_오후_5 00 13" src="https://github.com/jellyjoji/home-work/assets/74365275/0d48fdcf-79cb-4aa6-a4fc-215240da6bac">
+
 
 
 
