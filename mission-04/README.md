@@ -1,10 +1,11 @@
 # GRID 과제
 
 ## HTML Mark up 
-// main>*(header>h1+.container>(figure+dl))
 main 안에서 header 과 container 로 나누어 
 header 에는 h2 title 제목을 명시해주었고,
-container 에는 image 와 subContainer 컨텐츠로 분리하였다.
+container 에는 image 와 subContainer 컨텐츠로 분리하였습니다.
+
+// main>*(header>h1+.container>(figure+dl))
 
 ### figure
 figure 는 사진,도표,비디오, 코드 등을 담는 컨테이너 역할입니다.
@@ -34,6 +35,7 @@ dt dd 는 가급적 1:1 대응할때 사용합니다. 주로 이름과 값을 �
 ```
 
 ## CSS
+해당 프로젝트의 미션은 Grid 속성 사용하기입니다. display: grid; 속성을 적용하여 grid-template-row, grid-template-columns, gap 요소를 사용하였습니다.
 
 ### :root 가상클레스선택자
 공통적으로 사용할 속성 스타일을 지정하여 일괄 변경에 편리하도록 하였습니다. 공통 색상, 폰트크기, 외각, 그림자 등을 지정할수습니다.
