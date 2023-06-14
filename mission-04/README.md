@@ -7,6 +7,12 @@ container 에는 image 와 subContainer 컨텐츠로 분리하였습니다.
 
 // main>*(header>h1+.container>(figure+dl))
 
+수정후 (index.html -> main.html)
+
+container 와 item 로 분류하여 item 안의 요소들에 grid 를 적용시켜 배치시켰습니다.
+
+// section.news>(h2.news-title+section.news-item>(h3.news-item-title3+time.news-item-date+p.news-item-drief+img))
+
 ### figure
 figure 는 사진,도표,비디오, 코드 등을 담는 컨테이너 역할입니다.
 ### figcaption
