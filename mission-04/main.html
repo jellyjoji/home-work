@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>main teacher</title>
+  <link rel="stylesheet" href="/main.css" />
+</head>
+
+<body>
+  <!-- container 와 item 분류 중요 -->
+  <!-- section.news>(h2.news-title+section.news-item>(h3.news-item-title3+time.news-item-date+p.news-item-drief+img)) -->
+
+  <!-- h1 대제목  -->
+  <h1 class="a11yHidden">웹카페</h1>
+  <section class="news">
+    <!-- accent-color 포인트 컬러 적용 -->
+    <h2 class="news-title accent-color">새소식</h2>
+    <section class="news-item">
+      <h3 class="news-item-title">W3C 사이트가 리뉴얼 되었습니다.</h3>
+      <time class="news-item-date" datetime="2023-06-14">2023.06.14</time>
+      <p class="news-item-drief">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ipsam accusantium, itaque amet fuga autem
+        corporis!
+      </p>
+      <figure class="news-item-thumbnail">
+        <img src="/images/news 1.png" alt="W3C 리뉴얼 이미지" />
+        <figcaption>W3C 리뉴얼</figcaption>
+      </figure>
+    </section>
+    <!-- 새소식을 보기 위한 더보기 아이콘  -->
+    <!-- item 에 포함시키지 않음  -->
+    <a href="/" class="news-more">
+      더보기
+    </a>
+  </section>
+  <!-- end -->
+</body>
+
+</html>

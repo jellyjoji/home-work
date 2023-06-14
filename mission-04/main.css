@@ -1,0 +1,93 @@
+/* grid 사용  */
+/* news-item 에 grid 사용 예정  */
+
+/* Accessibility Styles */
+.a11yHidden {
+  overflow: hidden;
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 2rem;
+  border: 1px solid gray;
+  font-size: 14px;
+  width: 460px;
+  border-radius: 5px;
+}
+
+.news {
+  margin: 2rem;
+  position: relative;
+}
+
+/* border-bottom 색상 확인용 */
+.news::before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #aaa, #fff);
+}
+
+.news-title {
+  font-size: 20px;
+  margin: 0;
+}
+
+/* 모듈 분리 */
+.accent-color {
+  color: orangered;
+}
+
+.news-more {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.news-item {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: 115px 1fr;
+  grid-template-rows: auto;
+  gap: 2rem;
+  grid-template-areas:
+    "thumbnail title"
+    "thumbnail date"
+    "thumbnail summary";
+}
+
+.news-item-title {
+  grid-area: title;
+  margin: 0;
+}
+
+.news-item-date {
+  grid-area: date;
+}
+
+.news-item-summary {
+  grid-area: summary;
+}
+
+.news-item-thumbnail {
+  grid-area: thumbnail;
+  margin: 0;
+  text-align: center;
+}
