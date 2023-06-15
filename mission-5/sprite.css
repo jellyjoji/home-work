@@ -1,0 +1,85 @@
+@import url(style/a11y.css);
+@import url(/style/base.css);
+@import url(/style/normalize.css);
+@import url(/style/theme.css);
+
+*{
+  font-family: "pretendard", sans-serif ;
+}
+/* 더보기 버튼의 기준이 되도록 position: relative; 적용  */
+.favorite{
+  margin: 2rem;
+  padding: 1rem;
+  background: linear-gradient(#c2c2c2, #e6e6e6);
+  width: 190px;
+  height: auto;
+  position: relative;
+  border : 1px solid gray;
+  border-radius: 5px;
+ }
+.accent{
+  color: var(--orange);
+}
+.title{
+  /* background: white; */
+  line-height: 1.5;
+  font-weight: 700;
+}
+.ranking{
+  /* background: pink; */
+  padding-top: 0.5rem;
+  /* counter-reset 은 혹시모를 오류 방지용이라 필수값은 아님. */
+  counter-reset: number;
+}
+.sprite{
+  background: url(/images/rank.png) no-repeat;
+  width: 100%;
+  line-height: 2;
+  font-size: 14px;
+}
+/* ol li 숫자 커스텀 디자인위해 ::before 태그 생성  */
+.sprite::before{
+  padding: 0.1rem 0.4rem; 
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  color: white;
+  background: var(--silver);
+}
+/* content: "1" 대신 counter-increment 사용 */
+ol li{
+  counter-increment: number;
+}
+.item1::before{
+  content: counter(number);
+}
+.item2::before{
+  content: counter(number);
+}
+.item3::before{
+  content: counter(number);
+}
+.item4::before{
+  content: counter(number);
+}
+/* background-position 으로 한 이미지의 위치 조정 */
+.item1{
+  background-position: 100% 6px;
+}
+.item2{
+  background-position: 100% -34px;
+}
+.item3{
+  background-position: 100% -12px;
+}
+.item4{
+  background-position: 100% 8px;
+}
+/* 더보기 링크에 position: absolute 를 주어 띄어줌 */
+.more{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: transparent;
+  line-height: 1.5;
+}

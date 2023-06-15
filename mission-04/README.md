@@ -23,7 +23,6 @@ figcaption 는 이에 대한 설명 문구를 담는 태그입니다.
         <figcaption>W3C 리뉴얼</figcaption>
       </figure>
 ```
-
 ### dl dt dd
 dl은 설명 목록 요소입니다.
 dt은 용어 제목 요소입니다.
