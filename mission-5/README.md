@@ -1,7 +1,7 @@
 # Sprite 과제
 
 ## 구조 설계
-![contents](/images/img.png "contents")
+![img](https://github.com/jellyjoji/home-work/assets/74365275/8c0d6e98-75b3-4bed-8bb9-4ccc3701891c)
 
 ## Image Sprite
 이미지 스프라이트(image sprite)란 여러 개의 이미지를 하나의 이미지로 합쳐서 관리하는 이미지를 의미합니다.
@@ -76,4 +76,4 @@ li::before{
 ```
 
 ## 완성 이미지
-![contents](/images/스크린샷_2023-06-14_오후_5.29.38.png "contents")
+<img width="755" alt="스크린샷_2023-06-14_오후_5 29 38" src="https://github.com/jellyjoji/home-work/assets/74365275/99442556-43fb-4b26-8005-a5daecd56ee6">
